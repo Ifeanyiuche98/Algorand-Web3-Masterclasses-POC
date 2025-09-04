@@ -25,7 +25,7 @@ const Home: React.FC<HomeProps> = () => {
 
         {/* Subheading */}
         <p className="text-gray-600 mb-8 text-base md:text-lg">
-          Your ticket to join the next-gen Web3 event. <br />
+          Your ticket to join the AfriMesh Web. AfriMesh is a decentralized, community-powered WiFi network built on Algorand. <br />
           Connect, explore, and get inspired!
         </p>
 
