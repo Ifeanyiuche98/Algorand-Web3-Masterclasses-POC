@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import ConnectWallet from './components/ConnectWallet'
 import Transact from './components/Transact'
 import AfrimeshNFTmint from './components/AfrimeshNFTmint'
+import Tokenmint from './components/Tokenmint'
 
 interface HomeProps {}
 
@@ -11,6 +12,7 @@ const Home: React.FC<HomeProps> = () => {
   const [openWalletModal, setOpenWalletModal] = useState<boolean>(false)
   const [openPaymentModal, setOpenPaymentModal] = useState<boolean>(false)
   const [openMintModal, setOpenMintModal] = useState<boolean>(false)
+  const [openTokenModal, setOpenTokenModal] = useState<boolean>(false)
 
   const { activeAddress } = useWallet()
 
@@ -25,7 +27,8 @@ const Home: React.FC<HomeProps> = () => {
 
         {/* Subheading */}
         <p className="text-gray-600 mb-8 text-base md:text-lg">
-          Your ticket to join the AfriMesh Web. AfriMesh is a decentralized, community-powered WiFi network built on Algorand. <br />
+          Your ticket to join the AfriMesh Web. AfriMesh is a decentralized,
+          community-powered WiFi network built on Algorand. <br />
           Connect, explore, and get inspired!
         </p>
 
@@ -56,14 +59,35 @@ const Home: React.FC<HomeProps> = () => {
               >
                 Mint AfriMesh MasterPass NFT
               </button>
+
+              <button
+                data-test-id="mint-token"
+                className="btn bg-indigo-500 text-white hover:bg-indigo-600"
+                onClick={() => setOpenTokenModal(true)}
+              >
+                Create Token (ASA)
+              </button>
             </>
           )}
         </div>
 
         {/* Modals */}
-        <ConnectWallet openModal={openWalletModal} closeModal={() => setOpenWalletModal(false)} />
-        <Transact openModal={openPaymentModal} setModalState={setOpenPaymentModal} />
-        <AfrimeshNFTmint openModal={openMintModal} setModalState={setOpenMintModal} />
+        <ConnectWallet
+          openModal={openWalletModal}
+          closeModal={() => setOpenWalletModal(false)}
+        />
+        <Transact
+          openModal={openPaymentModal}
+          setModalState={setOpenPaymentModal}
+        />
+        <AfrimeshNFTmint
+          openModal={openMintModal}
+          setModalState={setOpenMintModal}
+        />
+        <Tokenmint
+          openModal={openTokenModal}
+          setModalState={setOpenTokenModal}
+        />
       </div>
     </div>
   )
