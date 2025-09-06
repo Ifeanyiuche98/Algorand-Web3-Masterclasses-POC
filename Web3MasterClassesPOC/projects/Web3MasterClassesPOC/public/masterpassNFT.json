@@ -1,7 +1,7 @@
 {
   "name": "MasterPass",
   "description": "This is a MasterPass NFT",
-  "image": "https://olive-legal-prawn-540.mypinata.cloud/ipfs/bafybeiabx22sknq5nzimaas7jlutn2eikeaf6ahodrwzmfpxzn2xvlpf5e",
+  "image": "https://gateway.pinata.cloud/ipfs/YOUR_IMAGE_CID",
   "unitName": "MP",
   "properties": {
     "Tier": "Gold",
