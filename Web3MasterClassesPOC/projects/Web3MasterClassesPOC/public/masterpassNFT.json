@@ -1,8 +1,8 @@
 {
-  "name": "AfriMeshMasterPass",
-  "description": "This is a AfriMeshMasterPass NFT",
+  "name": "MasterPass",
+  "description": "This is a MasterPass NFT",
   "image": "https://olive-legal-prawn-540.mypinata.cloud/ipfs/bafybeiabx22sknq5nzimaas7jlutn2eikeaf6ahodrwzmfpxzn2xvlpf5e",
-  "unitName": "AFM",
+  "unitName": "MP",
   "properties": {
     "Tier": "Gold",
     "Person": 2
